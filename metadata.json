@@ -1,0 +1,7 @@
+{
+  "requestFramePermissions": [
+    "geolocation"
+  ],
+  "name": "Parkr: Find Your Spot",
+  "description": ""
+}

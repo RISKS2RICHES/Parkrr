@@ -28,8 +28,8 @@ const LandingPage: React.FC = () => {
         </p>
 
         {/* Store Buttons - Side by Side & Brand Colored */}
-        <div className="flex flex-row items-center justify-center gap-2 sm:gap-4 animate-fade-in w-full max-w-sm mx-auto px-2">
-          <button className="flex-1 flex items-center justify-center bg-indigo-600 text-white border border-transparent px-3 py-3 rounded-xl hover:bg-indigo-700 transition-all shadow-lg hover:-translate-y-1 active:scale-95 group">
+        <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-4 animate-fade-in w-full max-w-xl mx-auto px-2">
+          <button className="flex-1 min-w-[140px] flex items-center justify-center bg-indigo-600 text-white border border-transparent px-3 py-3 rounded-xl hover:bg-indigo-700 transition-all shadow-lg hover:-translate-y-1 active:scale-95 group">
             <i className="fa-brands fa-apple text-xl sm:text-2xl mr-2 sm:mr-3 text-white"></i>
             <div className="text-left">
               <div className="text-[7px] sm:text-[8px] font-bold uppercase tracking-wider opacity-80 text-white">Download on the</div>
@@ -37,7 +37,7 @@ const LandingPage: React.FC = () => {
             </div>
           </button>
           
-          <button className="flex-1 flex items-center justify-center bg-indigo-600 text-white border border-transparent px-3 py-3 rounded-xl hover:bg-indigo-700 transition-all shadow-lg hover:-translate-y-1 active:scale-95 group">
+          <button className="flex-1 min-w-[140px] flex items-center justify-center bg-indigo-600 text-white border border-transparent px-3 py-3 rounded-xl hover:bg-indigo-700 transition-all shadow-lg hover:-translate-y-1 active:scale-95 group">
             <svg className="w-5 h-5 sm:w-6 sm:h-6 mr-2 sm:mr-3" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
               <path fill="#4285F4" d="M24,24L4.7,4.7C4.1,5.5,3.8,6.5,3.8,7.6v32.8c0,1.1,0.3,2.1,0.9,2.9L24,24z"/>
               <path fill="#34A853" d="M35.6,18.4L9.6,3.5C8.8,3,7.9,2.8,7,2.8c-0.9,0-1.7,0.3-2.3,0.7L24,24L35.6,18.4z"/>
@@ -49,6 +49,14 @@ const LandingPage: React.FC = () => {
               <div className="text-[10px] sm:text-xs font-black leading-none mt-0.5 text-white">Google Play</div>
             </div>
           </button>
+
+          <a href="https://app.parkrglobal.com" target="_blank" rel="noopener noreferrer" className="flex-1 min-w-[140px] flex items-center justify-center bg-indigo-600 text-white border border-transparent px-3 py-3 rounded-xl hover:bg-indigo-700 transition-all shadow-lg hover:-translate-y-1 active:scale-95 group">
+            <i className="fa-solid fa-globe text-xl sm:text-2xl mr-2 sm:mr-3 text-white"></i>
+            <div className="text-left">
+              <div className="text-[7px] sm:text-[8px] font-bold uppercase tracking-wider opacity-80 text-white">Use on the</div>
+              <div className="text-[10px] sm:text-xs font-black leading-none mt-0.5 text-white">Web App</div>
+            </div>
+          </a>
         </div>
 
         {/* Phone Mockup Area */}

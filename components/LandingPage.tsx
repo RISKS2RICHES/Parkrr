@@ -51,16 +51,6 @@ const LandingPage: React.FC = () => {
           </button>
         </div>
 
-        {/* Visit Web App Button */}
-        <div className="mt-4 animate-fade-in">
-          <a 
-            href="https://app.parkrglobal.com" 
-            className="inline-flex items-center justify-center px-8 py-3 bg-slate-900 text-white rounded-xl font-black text-[10px] uppercase tracking-[0.2em] shadow-lg hover:bg-slate-800 transition-all hover:-translate-y-1 active:scale-95 border border-transparent"
-          >
-            Visit Web App <i className="fa-solid fa-arrow-up-right-from-square ml-2 text-[9px]"></i>
-          </a>
-        </div>
-
         {/* Phone Mockup Area */}
         <div className="mt-12 md:mt-16 relative max-w-4xl mx-auto h-[250px] md:h-[380px] flex items-end justify-center overflow-visible">
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[250px] h-[250px] bg-indigo-500/10 rounded-full blur-3xl pointer-events-none"></div>

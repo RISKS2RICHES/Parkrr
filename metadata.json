@@ -1,7 +1,5 @@
 {
-  "requestFramePermissions": [
-    "geolocation"
-  ],
   "name": "Parkr: Find Your Spot",
-  "description": ""
+  "description": "The premier marketplace for private parking.",
+  "requestFramePermissions": []
 }

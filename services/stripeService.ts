@@ -10,17 +10,10 @@ export const STRIPE_PK = '';
 
 export const stripeService = {
   createSession: async (userId: string, email?: string) => {
-    console.log("Stripe service is disabled.");
     return { success: false, client_secret: '', id: '' };
   },
 
   checkStatus: async (sessionId: string) => {
-    console.log("Stripe service is disabled.");
-    return {
-      status: 'canceled',
-      verified: false,
-      verifiedOutputs: null,
-      lastError: null
-    };
+    return { status: 'canceled', verified: false, verifiedOutputs: null, lastError: null };
   }
 };

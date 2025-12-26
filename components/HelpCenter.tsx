@@ -1,8 +1,5 @@
 
 import React, { useState, useRef, useEffect } from 'react';
-import { GoogleGenAI } from "@google/genai";
-
-const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
 
 const HelpCenter: React.FC = () => {
   const [messages, setMessages] = useState<{role: 'user' | 'assistant', text: string}[]>([
@@ -29,21 +26,20 @@ const HelpCenter: React.FC = () => {
     setInputText('');
     setIsTyping(true);
 
-    try {
-      const response = await ai.models.generateContent({
-        model: "gemini-3-flash-preview",
-        contents: [...messages.map(m => ({role: m.role === 'assistant' ? 'model' : 'user', parts: [{text: m.text}]})), {role: 'user', parts: [{text: userMessage}]}],
-        config: {
-          systemInstruction: "You are the Parkr support assistant. Help users with questions about parking, hosting, fees, and security. Use British English. Parkers are drivers, Parkees are hosts. Both accounts are free to join. There are no monthly subscription fees for either role. Parkr earns revenue through a simple 20% commission on all successful bookings, which is deducted from the host's (Parkee) earnings. Parkers pay the listed price with no additional platform fees.",
-        }
-      });
+    // Simulate AI response delay
+    setTimeout(() => {
+      let responseText = "Thanks for your question. As this is a showcase website, live support is currently simulated. In the full app, I can help with bookings, payments, and account verification.";
       
-      setMessages(prev => [...prev, {role: 'assistant', text: response.text || "I'm sorry, I couldn't process that."}]);
-    } catch (error) {
-      setMessages(prev => [...prev, {role: 'assistant', text: "Systems are busy. Try again shortly."}]);
-    } finally {
+      const lower = userMessage.toLowerCase();
+      if (lower.includes("price") || lower.includes("cost")) {
+        responseText = "Parkr is free to join! Drivers pay the listed hourly rate, and Hosts keep 80% of their earnings. We charge a 20% commission only on successful bookings.";
+      } else if (lower.includes("host") || lower.includes("list")) {
+        responseText = "Hosting is easy. Just verify your identity, upload a photo of your space, and set your availability. You can start earning in minutes.";
+      }
+
+      setMessages(prev => [...prev, {role: 'assistant', text: responseText}]);
       setIsTyping(false);
-    }
+    }, 1500);
   };
 
   return (
